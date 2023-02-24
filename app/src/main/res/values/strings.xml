@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BtapBuoi5</string>
+    <string-array name="level_arrays">
+        <item>CĐ</item>
+        <item>ĐH</item>
+        <item>CH</item>
+    </string-array>
+</resources>

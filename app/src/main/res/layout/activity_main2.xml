@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Abc">
+
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="16dp"
+        android:text="Họ tên:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_info"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info" />
+
+    <EditText
+        android:id="@+id/txt_inputname"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Nhập vào họ tên"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_name"
+        app:layout_constraintEnd_toEndOf="@+id/txt_info"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_name" />
+
+    <TextView
+        android:id="@+id/txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Số điện thoại:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_name"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <EditText
+        android:id="@+id/txt_inputphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="+84"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_phone"
+        app:layout_constraintEnd_toEndOf="@+id/txt_inputname"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_inputname" />
+
+    <TextView
+        android:id="@+id/txt_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Giới tính:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_phone"
+        app:layout_constraintTop_toBottomOf="@+id/txt_phone" />
+
+    <Switch
+        android:id="@+id/switch_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-30dp"
+        android:text="Nam/Nữ"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_sex"
+        app:layout_constraintEnd_toEndOf="@+id/txt_inputphone"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toEndOf="@+id/txt_phone" />
+
+    <TextView
+        android:id="@+id/txt_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Trình độ:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_sex"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sex" />
+
+    <Spinner
+        android:id="@+id/spin_level"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/level_arrays"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_level"
+        app:layout_constraintEnd_toEndOf="@+id/switch_sex"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/switch_sex" />
+
+    <TextView
+        android:id="@+id/txt_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Tuổi:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_level"
+        app:layout_constraintTop_toBottomOf="@+id/txt_level" />
+
+    <SeekBar
+        android:id="@+id/seek_age"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_age"
+        app:layout_constraintEnd_toEndOf="@+id/spin_level"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spin_level" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_sport"
+        app:layout_constraintEnd_toEndOf="@+id/seek_age"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/seek_age" />
+
+    <TextView
+        android:id="@+id/txt_sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Thể thao:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_age"
+        app:layout_constraintTop_toBottomOf="@+id/txt_age" />
+
+    <TextView
+        android:id="@+id/txt_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Thể loại âm nhạc:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/txt_sport"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sport" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-20dp"
+        android:text="Cancel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_regis"
+        app:layout_constraintEnd_toEndOf="@+id/rb_pop" />
+
+    <Button
+        android:id="@+id/btn_regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="112dp"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="@+id/txt_music"
+        app:layout_constraintTop_toBottomOf="@+id/txt_music" />
+
+    <RadioButton
+        android:id="@+id/rb_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="Pop"
+        app:layout_constraintEnd_toEndOf="@+id/rb_rap"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rb_rap"
+        app:layout_constraintTop_toBottomOf="@+id/rb_rap" />
+
+    <RadioButton
+        android:id="@+id/rb_rap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="Rap"
+        app:layout_constraintEnd_toEndOf="@+id/rb_rock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rb_rock"
+        app:layout_constraintTop_toBottomOf="@+id/rb_rock" />
+
+    <RadioButton
+        android:id="@+id/rb_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-135dp"
+        android:text="Rock"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_music"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
